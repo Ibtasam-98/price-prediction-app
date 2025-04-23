@@ -16,7 +16,6 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   Get.put(DashboardController());
-
   runApp(MyApp());
 }
 
@@ -36,7 +35,7 @@ class MyApp extends StatelessWidget {
           home: _auth.currentUser != null ? const Dashboard() :  OnBoardingScreen(),
         );
       },
-      child:  OnBoardingScreen(), // This child is used if the builder returns null
+      child:  OnBoardingScreen(),
     );
   }
 }
